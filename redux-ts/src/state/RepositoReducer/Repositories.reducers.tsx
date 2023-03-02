@@ -1,26 +1,28 @@
-import React from 'react'
+import { ActionType } from "../Actions-type/Actions-type";
+import { Action } from "../Action/ActionManage";
 
-// thats the same if create obj without typescript
+
+// interface initial to State!!! 
 export interface InitialState{
    loading: boolean;
    error: string| null;
    data: string[]
 }
 
-const reducer = (state:InitialState, action:any):InitialState => {
+const reducer =(state:InitialState, action:Action):InitialState => {
+    
   switch(action.type){
-    case "search_repositories":
+    case ActionType.SEARCH_REPOSITORIES :
         return {loading:true, error:null, data:[]}
-    case "search_repositories_success":
+    case ActionType.SEARCH_REPOSITORIES_SUCCESS :
         return { loading:false, error:null,data:action.payload}
-    case "search_repositories_error":
+    case ActionType.SEARCH_REPOSITORIES_ERROR:
         return {loading:false, error: action.payload, data:[] }
     default:
     return state
   }
 
 }
-
 
 export default reducer
 
