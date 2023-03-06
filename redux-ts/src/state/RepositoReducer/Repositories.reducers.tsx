@@ -9,7 +9,13 @@ export interface InitialState{
    data: string[]
 }
 
-const reducer =(state:InitialState, action:Action):InitialState => {
+const initialstate = {
+  loading:false,
+  error:null,
+  data: []
+}
+
+const reducer =(state:InitialState=initialstate, action:Action):InitialState => {
     
   switch(action.type){
     case ActionType.SEARCH_REPOSITORIES :
