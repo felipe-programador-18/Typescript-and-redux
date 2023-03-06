@@ -1,11 +1,12 @@
 import React from 'react';
 
 import './App.css';
+import { ManageApp } from './Components';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Programmer Felipe Here!</h1>
+      <ManageApp/>
       
     </div>
   );
