@@ -12,7 +12,7 @@ export interface InitialState{
 const initialstate = {
   loading:false,
   error:null,
-  data: []
+  data:[]
 }
 
 const reducer =(state:InitialState=initialstate, action:Action):InitialState => {
