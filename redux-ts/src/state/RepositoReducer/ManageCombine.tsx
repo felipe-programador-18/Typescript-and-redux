@@ -7,3 +7,5 @@ const reducer =combineReducers ({
 })
 
 export default reducer;
+// I have to return my type that I want to receive !!
+export type RootState= ReturnType<typeof reducer>
